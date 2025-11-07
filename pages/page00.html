@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../styles/style00.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a href="../pages/page00.html">Storia</a></li>
+                    <li><a href="../pages/page01.html">Codice morale</a></li>
+                    <li><a href="../pages/page02.html">Influenza oggi</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="card">
+            <h2 class="title-article">La Storia dei Samurai:</h2>
+                <p class="description-article">La figura del samurai rappresenta uno dei simboli più duraturi della cultura giapponese. Il termine "samurai” deriva dal verbo *saburau*, che significa "servire”. In origine, intorno all'VIII secolo, designava funzionari armati al servizio della corte imperiale di Kyoto, ma col tempo divenne sinonimo di guerriero professionista appartenente a una classe militare d'élite. Durante il periodo Heian (794-1185), i samurai si affermarono come protettori dei grandi latifondi e iniziarono a esercitare il potere locale. </p>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimagenes.arrecaballo.es%2Fwp-content%2Fuploads%2F2017%2F09%2Fprimeros-comandantes-militares-samurais.png&f=1&nofb=1&ipt=128c06f40e8b64f2f1abd39274f2cc0ca4987b40f51bceb1a6a21276586337b5">
+                <p class="description-article">La loro importanza crebbe fino a culminare nella guerra Genpei (1180-1185), che portò alla vittoria del clan Minamoto e all'istituzione del primo governo militare, lo *shogunato Kamakura*. Da quel momento, il Giappone fu governato da un sistema feudale dove lo shōgun deteneva il potere effettivo, mentre l'imperatore restava una figura simbolica. Tra il XIII e il XVI secolo i samurai dominarono la scena politica e militare. Nel periodo Muromachi (1336-1573) e ancor più durante l'epoca Sengoku (“dei Regni combattenti”), il Giappone fu attraversato da guerre civili continue. I samurai erano i principali protagonisti di queste lotte, al servizio dei *daimyō*, i signori feudali. L'unificazione del paese arrivò solo grazie a Oda Nobunaga, Toyotomi Hideyoshi e infine Tokugawa Ieyasu, che nel 1603 fondò lo shogunato Tokugawa. Con la pace del periodo Edo (1603-1868), la classe samurai perse gradualmente la sua funzione militare: divenne una burocrazia erudita e stipendiata, dedicata anche alle arti, alla poesia e all'amministrazione.</p>
+                <img src="../files/imgs/samurai.png">
+                <p class="description-article">Tuttavia, manteneva privilegi sociali e il diritto esclusivo di portare la spada (*daishō*). L'arrivo delle potenze occidentali e la Restaurazione Meiji (1868) decretarono la fine dello shogunato e dell'ordine feudale: la casta samurai venne abolita, perse i suoi stipendi e il diritto di portare armi. Nonostante la scomparsa come gruppo sociale, il samurai rimase nell'immaginario giapponese come simbolo di onore, disciplina e lealtà. Il suo ideale morale, codificato nel *Bushidō*, divenne parte integrante della cultura nazionale.</p>
+
+            <h3>Fonti:</h3>
+                <p class="description-article"><a href="https://www.pbs.org/wgbh/nova/samurai/hist-nf.html">Pbs.org</a>, <a href="https://www.britannica.com/topic/samurai">Britannica.com</a></li>, <a href="https://www.japan-guide.com/e/e2127.html">Japan-guide.com</a> e <a href="https://en.wikipedia.org/wiki/Samurai">Wikipedia.org</a></li></p>
+            <a href="..//" class="redirect">Torna alla home page →</a>
+        </div>
+        <footer class="footer">
+            <p>© 2025 - IN0501395 Alessio Sanda</p>
+        </footer>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".title-article, .description-article, .card img");
+
+        fadeElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transition = "opacity 1s ease-out";
+        });
+
+        window.addEventListener("scroll", () => {
+            fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 10) {
+                el.style.opacity = 1;
+            }
+            });
+        });
+        });
+    </script>
+</html>

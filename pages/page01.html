@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../styles/style00.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a href="../pages/page00.html">Storia</a></li>
+                    <li><a href="../pages/page01.html">Codice morale</a></li>
+                    <li><a href="../pages/page02.html">Influenza oggi</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="card">
+            <h2 class="title-article">Il Codice Morale (Bushidō):</h2>
+                <p class="description-article">Il *Bushidō* (武士道, "via del guerriero”) è il codice etico che definiva il comportamento ideale del samurai. Non fu mai un unico testo, ma un insieme di valori trasmessi attraverso secoli di pratica, filosofia e religione.</p>
+                <img src="../files/imgs/samurai.jpg">
+                <p class="description-article">Le sue radici affondano nel confucianesimo (dovere, gerarchia), nello shintoismo (lealtà, purezza spirituale) e nel buddhismo zen (autocontrollo, accettazione della morte). Durante il periodo Edo, con la fine delle guerre, il Bushidō fu formalizzato in opere come *Hagakure* di Yamamoto Tsunetomo e *Gorin no Sho* ("Il libro dei cinque anelli”) di Miyamoto Musashi. Questi testi cercavano di adattare l’etica guerriera a un’epoca di pace. I valori fondamentali del Bushidō includevano:</p>
+                <img src="../files/imgs/Bushido.jpg" ip="bushido-img">
+                <p class="description-article">Il samurai ideale doveva vivere con disciplina e morire senza paura, mantenendo la propria dignità anche nel suicidio rituale (*seppuku*), considerato un modo di espiare il disonore. Tuttavia, storicamente il Bushidō non fu sempre rispettato: molti samurai agivano per interesse politico o economico, e l’immagine di guerriero "puro” è in parte frutto di una mitizzazione successiva. Nel XIX e XX secolo, con la costruzione del Giappone moderno, il Bushidō fu reinterpretato in chiave patriottica e nazionale. L’idea di lealtà e sacrificio per il bene comune influenzò la mentalità militare e persino l’etica aziendale contemporanea giapponese.</p>
+            <h3>Fonti:</h3>
+                <p class="description-article"><a href="https://en.wikipedia.org/wiki/Bushido">Wikipedia.org</a> <a href="https://www.history.com/articles/samurai-and-bushido">History.com</a> <a href="https://japanesesword.net/blogs/news/from-samurai-code-to-modern-life-bushidos-profound-influence-on-japanese-society">Japanesesword.net</a></p>
+            <a href="..//" class="redirect">Torna alla home page  →</a>
+        </div>
+        <footer class="footer">
+            <p>© 2025 - IN0501395 Alessio Sanda</p>
+        </footer>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".title-article, .description-article, .card img");
+
+        fadeElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transition = "opacity 1s ease-out";
+        });
+
+        window.addEventListener("scroll", () => {
+            fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 10) {
+                el.style.opacity = 1;
+            }
+            });
+        });
+        });
+    </script>
+</html>
